@@ -52,7 +52,7 @@ $ npm test JSI.test.js
 ```
 esto correrá el test del primer ejercicio.
 
-Encontrarás una carpeta llamada Ejercicios en la cual están los mismos. Dado el caso necesitas una guía, hay una carpeta con soluciones propuestas. Pero si estás comenzando, trata primero de resolverlos por tu cuenta, antes de ver las soluciones propuestas, estás se han codeado de la manera más simple y sencilla con el fin de que sean fáciles de entender.
+Encontrarás una carpeta llamada *Exercises* en la cual están los mismos. Dado el caso necesitas una guía, hay una carpeta con soluciones propuestas. Pero si estás comenzando, trata primero de resolverlos por tu cuenta, antes de ver las soluciones propuestas, estás se han codeado de la manera más simple y sencilla con el fin de que sean fáciles de entender.
 
 
  Pues bien, no siendo más, manos a la obra, espero te sean de ayuda y si deseas invitarme un café no lo dudes.
