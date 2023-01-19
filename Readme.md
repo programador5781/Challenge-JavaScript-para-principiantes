@@ -55,7 +55,15 @@ esto correrá el test del primer ejercicio.
 Encontrarás una carpeta llamada **Exercises** en la cual están los mismos. Dado el caso necesitas una guía, hay una carpeta con soluciones propuestas. Pero si estás comenzando, trata primero de resolverlos por tu cuenta, antes de ver las soluciones propuestas, estás se han codeado de la manera más simple y sencilla con el fin de que sean fáciles de entender.
 
 
- Pues bien, no siendo más, manos a la obra, espero te sean de ayuda y si deseas invitarme un café no lo dudes.
+ Pues bien, no siendo más, manos a la obra, espero te sean de ayuda!
 
-☕ +57 315 535 7926
-👌 ( nequi - Colombia)
+ 
+ 
+[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_3.svg)](https://cafecito.app/programador5781)
+ 
+ [buy me a coffe!](https://www.buymeacoffee.com/programador5781)
+
+
+
+
+
