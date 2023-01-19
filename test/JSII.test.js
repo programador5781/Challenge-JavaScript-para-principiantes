@@ -1,4 +1,4 @@
-const isPalindrome = require('./JSII');
+const isPalindrome = require('./JSII.test');
 
 
 describe("isPalindrome()", () => {
