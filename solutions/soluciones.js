@@ -197,3 +197,75 @@ function addBinary(a,b){
   }
   return result;
 }
+
+
+
+/*Solución al ejercicio JS.X - Nivel de dificultad - Easy.
+isHappy*/
+function isHappy(n){
+  // Tu código acá:
+  let seen = new Set();
+  while (n !== 1) {
+      if (seen.has(n)) {
+          return false;
+      }
+      seen.add(n);
+      let next = 0;
+      while (n > 0) {
+          let digit = n % 10;
+          next += digit * digit;
+          n = (n - digit) / 10;
+      }
+      n = next;
+  }
+  return true;
+}
+
+
+/*Solución al ejercicio JS.XI - Nivel de dificultad - Easy.
+encontrarNumerosPrimos*/
+function encontrarNumerosPrimos(num) {
+  let primos = [];
+  for (let i = 2; i <= num; i++) {
+    let esPrimo = true;
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        esPrimo = false;
+        break;
+      }
+    }
+    if (esPrimo) {
+      primos.push(i);
+    }
+  }
+  return primos;
+}
+
+
+
+//SOLUCION AL DESAFIO JSXII DIFICULTAD MEDIUM
+function longestPalindrome(s) {
+  let n = s.length;
+  let dp = new Array(n);
+  for (let i = 0; i < n; i++) {
+      dp[i] = new Array(n).fill(false);
+  }
+  let start = 0;
+  let maxLength = 1;
+  for (let i = 0; i < n; i++) {
+      dp[i][i] = true;
+  }
+  for (let len = 2; len <= n; len++) {
+      for (let i = 0; i < n - len + 1; i++) {
+          let j = i + len - 1;
+          if (s[i] === s[j] && (len === 2 || dp[i + 1][j - 1])) {
+              dp[i][j] = true;
+              if (len > maxLength) {
+                  start = i;
+                  maxLength = len;
+              }
+          }
+      }
+  }
+  return s.substring(start, start + maxLength);
+}
