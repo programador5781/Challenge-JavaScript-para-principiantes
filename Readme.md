@@ -58,8 +58,7 @@ Encontrarás una carpeta llamada **Exercises** en la cual están los mismos. Dad
  Pues bien, no siendo más, manos a la obra, espero te sean de ayuda!
 
  
- 
- [buy me a coffe!](https://www.buymeacoffee.com/programador5781) ☕
+ [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/programador5781)
 
 
 
