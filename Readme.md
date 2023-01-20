@@ -59,12 +59,8 @@ Encontrarás una carpeta llamada **Exercises** en la cual están los mismos. Dad
 
  
  
-[![Invitame un café en cafecito.app](https://cdn.cafecito.app/imgs/buttons/button_3.svg)](https://cafecito.app/programador5781)
- 
- [buy me a coffe!](https://www.buymeacoffee.com/programador5781)
-```html
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="programador5781" data-color="#BD5FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-```
+ [buy me a coffe!](https://www.buymeacoffee.com/programador5781) ☕
+
 
 
 
