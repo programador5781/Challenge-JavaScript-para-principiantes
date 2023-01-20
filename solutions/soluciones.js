@@ -1,53 +1,199 @@
- // SOLUCIONES
-/*
-Solución al ejercicio JS.I - Nivel de dificultad - Easy.
-Este código es una función en JavaScript que encuentra el prefijo común más largo de un conjunto de cadenas (strs). 
-Primero, comprueba si la matriz de cadenas está vacía o solo tiene un elemento, en cuyo caso devuelve esa cadena o una cadena vacía, respectivamente. 
-Luego, ordena la matriz de cadenas y almacena la primera y la última cadena en variables separadas. A continuación, itera a través de cada carácter 
-de la primera cadena y compara ese carácter con el carácter en la misma posición en la última cadena. Si alguna vez encuentra una desigualdad, devuelve
-la primera cadena desde el principio hasta esa posición. Si llega al final de la primera cadena sin encontrar una desigualdad, devuelve la primera cadena 
-completa. */
+// SOLUCIONES - Estas son una manera de resolver los ejercicios, seguro ustedes encontrarán más.
 
-
+/*Solución al ejercicio JS.I - Nivel de dificultad - Easy.
+ */
 function longestCommonPrefix(strs) {
-    if (strs.length === 0) {
-        return "";
+  if (strs.length === 0) {
+    return "";
+  }
+  if (strs.length === 1) {
+    return strs[0];
+  }
+  strs.sort();
+  var first = strs[0];
+  var last = strs[strs.length - 1];
+  for (var i = 0; i < first.length; i++) {
+    if (first[i] !== last[i]) {
+      return first.substring(0, i);
     }
-    if (strs.length === 1) {
-        return strs[0];
-    }
-    strs.sort();
-    var first = strs[0];
-    var last = strs[strs.length - 1];
-    for (var i = 0; i < first.length; i++) {
-        if (first[i] !== last[i]) {
-            return first.substring(0, i);
-        }
-    }
-    return first;
+  }
+  return first;
+}
+
+
+/* Solución al ejercicio JS.II - Nivel de dificultad - Easy.
+Palindrome Number*/
+function isPalindrome(x) {
+  // Tu código aquí:
+  let y = x.toString().split("").reverse().join("");
+  if (y == x) return true;
+  return false;
 }
 
 
 
-/* Solución al ejercicio JS.II - Nivel de dificultad - Easy.
+/*Solución al ejercicio JS.III - Nivel de dificultad - Easy.
+Roman to Integer*/
+function romanToInt(s) {
+  // Tú código acá:
+  var symbols = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
 
-Palindorme Number
-Dado un entero x, devuelve verdadero si x es un palíndromo  y falso en caso contrario.
-Ejemplo:
-Input: x = 121
-Output: true
-Explicación: 121 se lee como 121 de izquierda a derecha y de derecha a izquierda.
+  var result = 0;
 
-Ejemplo 2:
-input: x = -121
-output: false
-Explicación: De izquierda a derecha, se lee -121. De derecha a izquierda,
-se convierte en 121-. Por lo tanto no es un palíndromo.
+  for (var i = 0; i < s.length; i++) {
+    var current = symbols[s[i]];
+    var next = symbols[s[i + 1]];
+
+    if (next > current) {
+      result -= current;
+    } else {
+      result += current;
+    }
+  }
+  return result;
+}
+
+
+
+/*Solución al ejercicio JS.IV - Nivel de dificultad - Easy.
+Valid Parentheses
 */
+function isValid(s) {
+  // Tu código acá:
+  let stack = [];
+    let mapping = {
+        ')': '(',
+        ']': '[',
+        '}': '{'
+    }
 
-function isPalindrome(x){
-    // Tu código aquí:
-  let y = x.toString().split("").reverse().join("")  ;
-  if(y == x) return true;
-  return false;
+    for (let i = 0; i < s.length; i++) {
+        let c = s.charAt(i);
+        if (c === '(' || c === '[' || c === '{') {
+            stack.push(c);
+        } else if (stack.length === 0 || stack[stack.length - 1] !== mapping[c]) {
+            return false;
+        } else {
+            stack.pop();
+        }
+    }
+    return stack.length === 0;
+}
+
+
+/*Solución al ejercicio JS.V - Nivel de dificultad - Easy.
+Merge Two Sorted Lists
+*/
+class ListNode {
+  constructor(val) {
+      this.val = val;
+      this.next = null;
+  }
+}
+
+function mergeTwoLists(list1, list2) {
+  let dummy = new ListNode(0);
+  let current = dummy;
+  while (list1 && list2) {
+      if (list1.val < list2.val) {
+          current.next = list1;
+          list1 = list1.next;
+      } else {
+          current.next = list2;
+          list2 = list2.next;
+      }
+      current = current.next;
+  }
+  if (list1) {
+      current.next = list1;
+  }
+  if (list2) {
+      current.next = list2;
+  }
+  return dummy.next;
+}
+
+
+/*Solución al ejercicio JS.VI - Nivel de dificultad - Easy.
+Remove Duplicates from Sorted Array*/
+function removeDuplicates(nums){
+  // Tu código aca:
+  if(nums.length === 0){
+      return 0;
+  }
+  for (let i = 0; i < nums.length; i++) {
+      if (typeof nums[i] !== "number"){
+          throw new Error("Array should contain only numbers");
+      }
+  }
+  let i = 0;
+  for (let j = 1; j < nums.length; j++) {
+      if (nums[j] !== nums[i]) {
+          i++;
+          nums[i] = nums[j];
+      }
+  }
+  return nums.slice(0, i + 1);
+}
+
+
+/*Solución al ejercicio JS.VII - Nivel de dificultad - Easy.
+Length of Last Word*/
+function gthOlenfLastWord(s) {
+  let words = s.trim().split(" ");
+  if(words.length === 0){
+      return 0;
+  }
+  return words[words.length - 1].length;
+}
+
+
+/*Solución al ejercicio JS.VIII - Nivel de dificultad - Easy.
+plusOne*/
+function plusOne(digits){
+  // Tu código acá:
+  for (let i = digits.length - 1; i >= 0; i--) {
+      if (digits[i] < 9) {
+          digits[i]++;
+          return digits;
+      }
+      digits[i] = 0;
+  }
+  digits.unshift(1);
+  return digits;
+}
+
+
+/*Solución al ejercicio JS.IX - Nivel de dificultad - Easy.
+addBinary*/
+function addBinary(a,b){
+  let carry = 0;
+  let result = "";
+  let i = a.length - 1;
+  let j = b.length - 1;
+  while (i >= 0 || j >= 0) {
+      let sum = carry;
+      if (i >= 0) {
+          sum += parseInt(a[i]);
+          i--;
+      }
+      if (j >= 0) {
+          sum += parseInt(b[j]);
+          j--;
+      }
+      carry = sum >> 1;
+      result = (sum & 1) + result;
+  }
+  if (carry) {
+      result = carry + result;
+  }
+  return result;
 }

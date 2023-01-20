@@ -1,4 +1,4 @@
-const longestCommonPrefix = require('./JSI.test');
+const longestCommonPrefix = require('../Exercises/JSI');
 
 
 describe('longestCommonPrefix', () => {
